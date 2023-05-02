@@ -1,0 +1,35 @@
+{
+	"name": "py_pdf",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "py_node",
+	"workspaceFolder": "/app",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"christian-kohler.path-intellisense",
+				"esbenp.prettier-vscode",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"GitHub.copilot",
+				"batisteo.vscode-django",
+				"xabikos.JavaScriptSnippets",
+				"formulahendry.vscode-mysql",
+				"ms-edgedevtools.vscode-edge-devtools",
+				"vscode-icons-team.vscode-icons",
+				"dbaeumer.vscode-eslint",
+				"christian-kohler.npm-intellisense",
+				"jasonnutter.search-node-modules",
+				"narsenico.vscode-progressive-increment",
+				"ms-azuretools.vscode-docker",
+				"WallabyJs.quokka-vscode",
+				"stringham.move-ts",
+				"njpwerner.autodocstring",
+				"eamodio.gitlens",
+				"aaron-bond.better-comments",
+				"kakumei.ts-debug",
+				"ritwickdey.LiveServer",
+				"GrapeCity.gc-excelviewer"
+			]
+		}
+	}
+}

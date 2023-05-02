@@ -1,0 +1,12 @@
+# TODO
+
+- [x] vscode task - tscdev: compile ts to js (tsc ts/index.ts --outDir ts/dist)
+- [x] ENV FILES
+- [x] Debugging
+- [x] Git inside container
+- [x] source venv/bin/activate entrypoint / or autorun in console first thing We need need to set inpretpath in container 
+- [x] Git behave .md
+- [x] ReadME.md
+- [x] program installations (and .MD to explain installtions)
+- [x] readme vscode settings
+- [x] conswatch run ts -c
