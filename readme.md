@@ -80,6 +80,29 @@ git checkout -b <branch> # new branch to create
     ```
 20. Go to step 6.
 
+
+### npm run pdf
+To compile and inspect on change run
+```bash
+cd src # from root dir
+npm run pdf
+```
+*run ts is defined in package.json (scripts) it calls a script watch.js which watches and logs errors in template.json*
+
+src/template.js is the intented pdfkit endpoint for report generation. Template.js write to a index.pdf file in root/public. The index.pdf file is then loaded into the index.html in rooot as an iframe. Ultimately leading to this structure:
+
+```bash
+npm run pdf > watch.js > template.js > ../public/index.pdf > ../index.html
+```
+
+### Packages
+Node package manager is used. Packages defined in package.json. Packages defined in package.json are built when the docker image is constructed from the dockerfile.
+```bash
+COPY src/package.json .
+RUN npm install
+```
+*defined in docker/py_node.dockerfile*
+
 ## Python
 
 ### Intendened usage
@@ -94,33 +117,7 @@ pip3 freeze > src/requirements.txt
 to update the requirements.txt with the packages used in the project. 
 
 On rebuild src/requirements.txt is downloaded to the pythons virtual enviourment
-```bash
-bash -c "python3 -m venv venv &&
-     source venv/bin/activate &&
-     pip install -r src/requirements.txt
-```
-*defined in docker-compose*
-## Typescript
 
-### npm run ts
-To compile and inspect on change run
-```bash
-npm run cons
-```
-*run ts is defined in package.json (scripts) and compiling specifications are defined in tsconfig.json*
-
-To compile bundle and host on change run
-```bash
-npm run web
-```
-*run ts is defined in package.json (scripts) and bundle specifications are defined webpack.config.cjs*
-
-### Packages
-Node package manager is used. Packages defined in package.json. Packages defined in package.json are built when the docker image is constructed from the dockerfile.
-```bash
-COPY src/package.json .
-RUN npm install
-```
 *defined in docker/py_node.dockerfile*
 
 ## Vscode settings
@@ -133,7 +130,7 @@ It is recommended that you syncronize your personal vscode settings. See how in 
 4. Document used abbreviations
 
 ## Debugging
-Debugging in VSCode (Python, TypeScript, and JavaScript)
+Debugging in VSCode (Python and JavaScript)
 ### Python
 1. Set breakpoints: Place breakpoints in your Python code by clicking in the left margin of the editor window next to the line of code where you want to pause the debugger.
 

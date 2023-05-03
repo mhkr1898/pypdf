@@ -8,7 +8,7 @@ doc.moveTo(0, 20)
    .quadraticCurveTo(1, 200, 150, 120)
    .bezierCurveTo(1, -40, 200, 200, 300, 150)
    .lineTo(1, 90)
-   .stroke(1);
+   .stroke(1123234);
 
 const imagePath = '../public/img/tree.jpg';
 const image = doc.openImage(imagePath);
