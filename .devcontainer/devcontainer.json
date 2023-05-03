@@ -1,5 +1,5 @@
 {
-	"name": "py_pdf",
+	"name": "py_node",
 	"dockerComposeFile": "../docker-compose.yml",
 	"service": "py_node",
 	"workspaceFolder": "/app",

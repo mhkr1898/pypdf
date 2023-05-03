@@ -10,11 +10,7 @@ services:
     env_file:
       - .env
     volumes:
-      - C:/py_pdf/:/app
+      - ./:/app
     privileged: true
-    command: bash -c "python3 -m venv venv &&
-                     source venv/bin/activate &&
-                     pip install -r src/requirements.txt &&
-                     chown -R vscode:vscode /app &&
+    command: bash -c "chown -R vscode:vscode /app &&
                      sleep infinity"
-    #command: bash -c "sleep infinity"
