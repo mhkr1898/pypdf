@@ -5,10 +5,6 @@
 - [Vscode installation](https://code.visualstudio.com/)
 - [Docker desktop installation](https://www.docker.com/products/docker-desktop/)
 
-### Highly Recommended
-
-- [Github account](https://github.com/)
-
 ## Code of Conduct
 
 ### Work in branches
