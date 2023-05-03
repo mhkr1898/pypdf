@@ -4,11 +4,11 @@ const doc = new pdfkit();
 const filePath = '../public/index.pdf';
 doc.pipe(fs.createWriteStream(filePath));
 doc.moveTo(0, 20)
-   .lineTo(100, 160)
-   .quadraticCurveTo(130, 200, 150, 120)
-   .bezierCurveTo(190, -40, 200, 200, 300, 150)
-   .lineTo(51, 90)
-   .stroke(21341234);
+   .lineTo(1, 160)
+   .quadraticCurveTo(1, 200, 150, 120)
+   .bezierCurveTo(1, -40, 200, 200, 300, 150)
+   .lineTo(1, 90)
+   .stroke(1);
 
 const imagePath = '../public/img/tree.jpg';
 const image = doc.openImage(imagePath);

@@ -1,8 +1,11 @@
+import 'dotenv/config';
 import chokidar from 'chokidar';
 import child_process from 'child_process';
 const { exec } = child_process;
-
-const fileToWatch = 'template.js';
+const src = process.env.SRC;
+console.log(src)
+const fileToWatch = src + "template.js";
+console.log(fileToWatch)
 
 chokidar.watch(fileToWatch).on('change', () => {
   console.log(`Changes detected in ${fileToWatch}, generating PDF...`);
