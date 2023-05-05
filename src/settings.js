@@ -2,7 +2,7 @@ import pdfkit from 'pdfkit';
 
 pdfkit.prototype.set_title = function() {
   this.font('Times-BoldItalic')
-      .fontSize(18)
+      .fontSize(13)
       .text('Praksisreflektioner', { align: 'center' });
 };
 

@@ -12,7 +12,7 @@ doc.moveTo(0, 20)
    .lineTo(1, 90)
    .stroke(12);
 
-const imagePath = '../public/assest/img/tree.jpg';
+const imagePath = '../public/assets/img/tree.jpg';
 const image = doc.openImage(imagePath);
 doc.image(image, {
    fit: [250, 300],  // set image size
