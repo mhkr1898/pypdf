@@ -1,5 +1,4 @@
-// pdf_settings.js
-import pdfkit from 'pdfkit';
+import pdfkit from 'pdfkit'; 
 
 pdfkit.prototype.set_title = function() {
   this.font('Times-BoldItalic')
