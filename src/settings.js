@@ -3,13 +3,13 @@ import pdfkit from 'pdfkit';
 
 pdfkit.prototype.set_title = function() {
   this.font('Times-BoldItalic')
-      .fontSize(24)
+      .fontSize(18)
       .text('Praksisreflektioner', { align: 'center' });
 };
 
 pdfkit.prototype.set_header = function(header) {
   this.font('Helvetica-Bold')
-      .fontSize(12)
+      .fontSize(15)
       .text(header, { align: 'left' });
 };
 

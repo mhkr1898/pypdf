@@ -1,16 +1,12 @@
-/**
- * Watches for changes in template.js file and generates PDF on change
- */
-
 import chokidar from 'chokidar';
 import child_process from 'child_process';
 const { exec } = child_process;
 
-const fileToWatch = './src/index.js';
-console.log(`Watching: ${fileToWatch}`);
+const filesToWatch = ['./**/*.js'];
+const watcher = chokidar.watch(filesToWatch, { ignored: /(^|[\/\\])\../ });
 
-chokidar.watch(['./src/index.js', './src/settings.js']).on('change', () => {
-  console.log(`Changes detected in ${fileToWatch} or pdf_settings, generating PDF...`);
+watcher.on('change', (path) => {
+  console.log(`Changes detected in ${path}, generating PDF...`);
   try {
     const child = exec('node index.js', (err, stdout, stderr) => {
       if (err) {
