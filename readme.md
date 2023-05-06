@@ -11,6 +11,15 @@ The reporistory is a working environment for data report generation (PDF)
 - [Vscode installation](https://code.visualstudio.com/)
 - [Docker desktop installation](https://www.docker.com/products/docker-desktop/)
 
+## Starting the devcontainer
+1. Start dockerdesktop
+2. open project in vscode
+3.  ```bash
+    F1 type build and chose rebuild and reopen container
+    ``` 
+4. Building can take a couple of minutes
+5. You are now in the container ready to develop!
+
 ## Usage
 
 1.  npm run pdf
