@@ -19,7 +19,9 @@ pdfkit.prototype.set_body = function(body) {
       .text(body, { align: 'left' });
 };
 
-pdfkit.prototype.set_img = function(imagePath, imageScale = 0.75) {
+
+pdfkit.prototype.set_img = function(imagePath, imageScale = 0.75, title) {
+  this.fontSize(25).text(title, {align: 'center'});
   const pageWidth = this.page.width - this.page.margins.left - this.page.margins.right;
   // Open image to get properties
   const image = this.openImage(imagePath);
