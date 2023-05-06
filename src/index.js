@@ -22,7 +22,7 @@ console.log(doc.heightOfString(lorem))
 doc.set_body(lorem)
 doc.moveDown(3)
 const bird = '../public/assets/img/bird.jpg';
-doc.set_img(bird, 0.2, 'Centered Image Example1');
+doc.set_img(bird, 0.2, 'Centered Image Example12');
 doc.end();
 
 // Cache busting code
