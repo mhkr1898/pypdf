@@ -14,9 +14,12 @@ The reporistory is a working environment for data report generation (PDF)
 ## Starting the devcontainer
 1. Start dockerdesktop
 2. open project in vscode
-3. F1 type build and chose rebuild and reopen container
+3. create a .env file in root. Specify what you need, or leave it emphy. 
+3. type ```bash docker-compose up ```
 4. Building can take a couple of minutes
-5. You are now in the container ready to develop!
+5. F1 type build and chose rebuild and reopen container
+6. Building can take a couple of minutes
+7. You are now in the container ready to develop!
 
 ## Usage
 
